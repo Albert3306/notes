@@ -33,24 +33,34 @@
 
 ## 6、权限控制 authz 配置
 
-![](E:\albert3306\notes\images\120150_r4BQ_2401265.png)
-
 ```
 [root@localhost modules]# vi /opt/svn/objects/conf/authz
+
+# 文件内容
+[groups]
+admin = test01,test02
+
+[/]
+@admin = rw
 ```
 
-7、用户密码 passwd 配置
-
-![](E:\albert3306\notes\images\133205_pp8T_2401265.png)
+## 7、用户密码 passwd 配置
 
 ```
 [root@localhost modules]# vi /opt/svn/objects/conf/passwd
+
+# 文件内容
+[users]
+test01 = 123456 # 账号密码
+test02 = 123456
 ```
 
 ## 8、服务 svnserve.conf 配置，去掉下面列出的前面的 #
 
 ```
 [root@localhost modules]# vi /opt/svn/objects/conf/svnserve.conf
+
+# 文件内容
 [general]
 #匿名访问的权限，可以是read,write,none,默认为read
 anon-access=none
@@ -75,9 +85,15 @@ authz-db=authz
 [root@localhost modules]# cp post-commit.tmpl post-commit
 [root@localhost modules]# chmod -R 777 post-commit
 [root@localhost modules]# vim /opt/svn/objects/hooks/post-commit
-```
 
-![](E:\albert3306\notes\images\TIM图片20180320103919.png)
+# 文件内容
+#!/bin/sh
+export LANG=zh_CN.UTF-8      # 文件的编码，自己看着办啦
+SVN_PATH=/usr/bin/svn          # svn的执行文件目录，默认滴
+WEB_PATH=/data/wwwroot/objects  # 项目路径
+
+$SVN_PATH co --username test01 --password 123456 svn://127.0.0.1/objects $WEB_PATH
+```
 
 ## 11、其他的 SVN 的一些操作
 
