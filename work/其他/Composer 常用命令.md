@@ -27,12 +27,12 @@
 
 ## 5、数据迁移和填充
 
-- 生成迁移数据库表：`php artisan make:migration create_user_table`
+- 生成迁移数据库表：`php artisan make:migration create_users_table`
 - 运行数据迁移：`php artisan migrate`
 - 回滚迁移：`php artisan migrate:rollback`
-- 生成 Seeder：`php artisan make:seeder UserTableSeeder`
+- 生成 Seeder：`php artisan make:seeder UsersTableSeeder`
 - 运行所有 Seeder：`php artisan db:seed`
-- 运行单一 Seeder：`php artisan db:seed --class UserTableSeeder`
+- 运行单一 Seeder：`php artisan db:seed --class UsersTableSeeder`
 
 ## 6、autoload 操作
 
