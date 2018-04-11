@@ -28,7 +28,11 @@ $public_key = $detail['key'];
 - ### Linux 环境
 
 ```
+# 生成私钥
+openssl genrsa -out rsa_private_key.pem
 
+# 生成公钥
+openssl rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
 ```
 
 ## 2、加密和解密
