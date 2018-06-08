@@ -17,3 +17,13 @@
 3. 修改 wrapper.conf 中 `wrapper.java.command=java` 的 Java 路径改为绝对路径（我的是：`/data/java`）
 
 4. 修改 `sonarqube/bin`  的读写权限 `chmod -R 777 bin` ,并启动 `./bin/linux-x86-64/sonar.sh start`
+
+5. 中文语言包安装
+
+   ```
+   # 从 GitHub 上下载语言包 https://github.com/SonarQubeCommunity/sonar-l10n-zh
+   
+   # 下载后放入到 extensions\plugins 下，重启
+   ```
+
+   
