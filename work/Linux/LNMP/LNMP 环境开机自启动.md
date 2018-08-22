@@ -5,7 +5,7 @@
 systemctl enable nginx
 
 # MySQL 自启动
-systemctl enable  mysqld
+systemctl enable mysqld
 
 # php-fpm 自启动
 systemctl enable php-fpm

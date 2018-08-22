@@ -10,7 +10,7 @@
    sonar.jdbc.password=root
    sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance  
    sonar.web.host=0.0.0.0  
-   sonar.web.context=/  
+   sonar.web.context=/
    sonar.web.port=9090 # 端口号可自定义
    ```
 
