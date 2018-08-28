@@ -4,7 +4,7 @@
 
 2. 下载到本地后并解压，进入` sonarqube/conf` 目录下，打开配置文件 sonar.properties
 
-   ```
+   ```Linux
    # 如果是其他数据库，将 mysql 改为相应的名称即可（注：需要去除这些配置前面的 #）
    sonar.jdbc.username=root
    sonar.jdbc.password=root
@@ -20,11 +20,10 @@
 
 5. 中文语言包安装
 
-   ```
+   ```Linux
    # 从 GitHub 上下载语言包 https://github.com/SonarQubeCommunity/sonar-l10n-zh
    
    # 下载后放入到 extensions\plugins 下，重启
    ```
 
-   
 

@@ -1,10 +1,10 @@
 # Windows10、CentOS7 双系统安装引导修复
 
-​	先安装 Windows10 再安装 CentOS7 后，重启后默认是进入的 CentOS7 的，必须要进入 grup 修复启动引导修复，才能自由切换两个系统。
+	先安装 Windows10 再安装 CentOS7 后，重启后默认是进入的 CentOS7 的，必须要进入 grup 修复启动引导修复，才能自由切换两个系统。
 
 ## 修复方式
 
-```
+```Linux
 # vim /boot/grub2/grub.cfg
 
 定位到 ### BEGIN /etc/grub.d/30_os-prober ### 于###END###之间，输入以下命令

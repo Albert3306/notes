@@ -4,11 +4,11 @@
 
 ------
 
-​	cron 来源于希腊单词 chronos（意为“时间”），指 Linux 系统下一个自动执行指定任务的程序（计划任务）
+	cron 来源于希腊单词 chronos（意为“时间”），指 Linux 系统下一个自动执行指定任务的程序（计划任务）
 
 ## 1、crontab 命令选项
 
-```
+```Linux
 #crontab -u <-l, -r, -e>
 -u指定一个用户
 -l列出某个用户的任务计划
@@ -18,11 +18,11 @@
 
 ## 2、cron 文件语法与写法
 
-​	可用 `crontab -e` 命令来编辑，编辑的是 `/var/spool/cron` 下对应用户的 cron 文件，也可以直接修改 `/etc/crontab` 文件
+	可用 `crontab -e` 命令来编辑，编辑的是 `/var/spool/cron` 下对应用户的 cron 文件，也可以直接修改 `/etc/crontab` 文件
 
 **格式：**
 
-```
+```Linux
 代码:
 Minute Hour Day Month Week command
 分钟 小时 天 月 星期 命令
@@ -41,7 +41,7 @@ Command 指定要执行的程序 、脚本或命令
 
 ## 3、几个特殊符号的含义
 
-```
+```Linux
 “*” 代表取值范围内的数字,
 “/” 代表”每”,
 “-” 代表从某个数字到某个数字,
@@ -50,7 +50,7 @@ Command 指定要执行的程序 、脚本或命令
 
 ## 4、关于 cron 配置文件 `/etc/crontab`
 
-```
+```Linux
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
@@ -73,7 +73,7 @@ SHELL 变量的值指定shell 环境（此处默认为 bash shell）；PATH 变�
 
 ## 5、常见cron示例参考
 
-```
+```Linux
 5  * * * * ls 指定每小时的第5分钟执行一次ls命令
 30 5 * * * ls 指定每天的 5:30 执行ls命令
 30 7 8 * * ls 指定每月8号的7：30分执行ls命令
@@ -95,7 +95,7 @@ SHELL 变量的值指定shell 环境（此处默认为 bash shell）；PATH 变�
 
 1. cron配置文件路径
 
-   ```
+   ```Linux
    vim /etc/crontab
    ```
 
@@ -103,14 +103,14 @@ SHELL 变量的值指定shell 环境（此处默认为 bash shell）；PATH 变�
 
 2. 重启cron的方法
 
-   ```
+   ```Linux
    /etc/rc.d/init.d/crond restart
    Usage: /etc/rc.d/init.d/crond {start|stop|status|reload|restart|condrestart}
    ```
 
 3. 修改脚本可执行
 
-   ```
+   ```Linux
    chmod +x filename
    ```
 

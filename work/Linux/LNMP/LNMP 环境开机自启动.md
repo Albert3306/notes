@@ -1,6 +1,6 @@
 # LNMP 环境开机自启动配置
 
-```
+```Linux
 # Nginx 自启动
 systemctl enable nginx
 

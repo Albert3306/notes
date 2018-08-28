@@ -20,7 +20,7 @@ chmod 600 .ssh/authorized_keys  # 设置 600 权限
 
 ## 3、创建仓库
 
-```
+```Linux
 mkdir /data/git/repository
 cd /data/git/repository
 
@@ -33,7 +33,7 @@ chmod g+s -R test.git
 
 ## 4、开启服务，进入/etc/ssh 目录，编辑 sshd_config，打开以下三个配置的注释
 
-```
+```Linux
 cd /etc/ssh
 vim sshd_config  # 去除下面三项的注释
 
@@ -46,13 +46,13 @@ AuthorizedKeysfile .ssh/authorized_keys
 
 ## 5、创建公钥，并将生成的公钥复制到 .ssh/authorized_keys
 
-```
+```Linux
 ssh-keygen -t rsa -C "youremail@example.com" 
 ```
 
 ## 6、上传同步到项目地址
 
-```
+```Linux
 # 进入仓库
 cd /data/git/repository/xiaozhu.git/hooks
 # 创建 post-receive 文件，并写入一下内容
@@ -68,7 +68,7 @@ chmod +x post-receive
 
 ## 7、给 git 账号赋予 /data/www 文件的读写权限
 
-```
+```Linux
 vim /etc/passwd
 
 chown -R git:git /data/www

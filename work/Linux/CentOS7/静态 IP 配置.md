@@ -1,6 +1,6 @@
 # 静态 IP 配置
 
-```
+```Linux
 # vim /etc/sysconfig/network-scripts/ifcfg-eth0 (不同网络配置文件可能会不太，根据实际情况修改)
 
 BOOTPROTO=static #dhcp改为static（修改）

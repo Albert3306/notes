@@ -6,7 +6,7 @@
 
 3、修改环境变量
 
-```
+```Linux
 $ sudo vi /etc/profile
 
 export JAVA_HOME=/data/java # 这里的路径就是解压后的 JDK 包

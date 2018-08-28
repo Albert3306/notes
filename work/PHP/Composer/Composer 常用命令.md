@@ -41,3 +41,10 @@
 ## 7、事件
 
 - 生成事件和监听器：`php artisan event:generate`
+
+## 8、Composer更换国内镜像
+
+```
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+```
+
